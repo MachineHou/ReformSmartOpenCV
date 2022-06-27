@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ReformSmartOpenCV.iml" filepath="$PROJECT_DIR$/.idea/modules/ReformSmartOpenCV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.main.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.iml" filepath="$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.main.iml" filepath="$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/smartopencv/ReformSmartOpenCV.smartopencv.unitTest.iml" />
+    </modules>
+  </component>
+</project>

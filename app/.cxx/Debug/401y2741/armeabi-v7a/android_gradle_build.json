@@ -1,0 +1,40 @@
+{
+  "buildFiles": [
+    "C:\\Users\\fosung\\Desktop\\ReformSmartOpenCV\\app\\src\\main\\jni\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "D:\\Android\\sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\fosung\\Desktop\\ReformSmartOpenCV\\app\\.cxx\\Debug\\401y2741\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "D:\\Android\\sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\fosung\\Desktop\\ReformSmartOpenCV\\app\\.cxx\\Debug\\401y2741\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "detection_based_tracker::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "detection_based_tracker",
+      "output": "C:\\Users\\fosung\\Desktop\\ReformSmartOpenCV\\app\\build\\intermediates\\cxx\\Debug\\401y2741\\obj\\armeabi-v7a\\libdetection_based_tracker.so",
+      "runtimeFiles": [
+        "C:\\Users\\fosung\\Desktop\\ReformSmartOpenCV\\app\\src\\main\\jni\\third_part\\opencv\\libs\\armeabi-v7a\\libopencv_java4.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "D:\\Android\\sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "D:\\Android\\sdk\\ndk\\21.4.7075529\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

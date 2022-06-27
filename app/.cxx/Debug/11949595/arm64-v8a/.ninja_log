@@ -1,0 +1,5 @@
+# ninja log v5
+2	1487	677679181	CMakeFiles/detection_based_tracker.dir/DetectionBasedTracker_jni.cpp.o	71eb1a4e151b306c
+1490	1619	677679181	C:/Users/fosung/Desktop/SmartOpenCV-master/SmartOpenCV-master/app/build/intermediates/cxx/Debug/11949595/obj/arm64-v8a/libdetection_based_tracker.so	237caeef8a8c8842
+9	3586	677738799	CMakeFiles/detection_based_tracker.dir/DetectionBasedTracker_jni.cpp.o	71eb1a4e151b306c
+3586	3743	677738799	C:/Users/fosung/Desktop/SmartOpenCV-master/SmartOpenCV-master/app/build/intermediates/cxx/Debug/11949595/obj/arm64-v8a/libdetection_based_tracker.so	237caeef8a8c8842

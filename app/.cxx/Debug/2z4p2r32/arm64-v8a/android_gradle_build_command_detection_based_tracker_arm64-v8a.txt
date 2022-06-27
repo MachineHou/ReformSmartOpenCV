@@ -1,0 +1,7 @@
+Executable : D:\Android\sdk\cmake\3.18.1\bin\ninja.exe
+arguments : 
+-C
+D:\androidwork\OpenCV\SmartOpenCV-master\SmartOpenCV-master\app\.cxx\Debug\2z4p2r32\arm64-v8a
+detection_based_tracker
+jvmArgs : 
+

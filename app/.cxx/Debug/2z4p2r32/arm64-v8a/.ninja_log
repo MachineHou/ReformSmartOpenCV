@@ -1,0 +1,9 @@
+# ninja log v5
+1	2977	677744500	CMakeFiles/detection_based_tracker.dir/DetectionBasedTracker_jni.cpp.o	6b716926bca23ac0
+2980	3110	677744500	D:/androidwork/OpenCV/SmartOpenCV-master/SmartOpenCV-master/app/build/intermediates/cxx/Debug/2z4p2r32/obj/arm64-v8a/libdetection_based_tracker.so	24507292489ff42f
+4	14	0	clean	15eee308e957973f
+0	9	0	clean	15eee308e957973f
+8	2206	677754744	CMakeFiles/detection_based_tracker.dir/DetectionBasedTracker_jni.cpp.o	6b716926bca23ac0
+2206	2349	677754744	D:/androidwork/OpenCV/SmartOpenCV-master/SmartOpenCV-master/app/build/intermediates/cxx/Debug/2z4p2r32/obj/arm64-v8a/libdetection_based_tracker.so	24507292489ff42f
+9	18	0	clean	15eee308e957973f
+0	7	0	clean	15eee308e957973f

@@ -1,0 +1,7 @@
+Executable : D:\Android\sdk\cmake\3.18.1\bin\ninja.exe
+arguments : 
+-C
+D:\androidwork\OpenCV\SmartOpenCV-master\SmartOpenCV-master\app\.cxx\RelWithDebInfo\2s6b6q1n\armeabi-v7a
+detection_based_tracker
+jvmArgs : 
+

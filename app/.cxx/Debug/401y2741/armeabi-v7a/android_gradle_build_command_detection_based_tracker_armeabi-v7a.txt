@@ -1,0 +1,7 @@
+Executable : D:\Android\sdk\cmake\3.18.1\bin\ninja.exe
+arguments : 
+-C
+C:\Users\fosung\Desktop\ReformSmartOpenCV\app\.cxx\Debug\401y2741\armeabi-v7a
+detection_based_tracker
+jvmArgs : 
+

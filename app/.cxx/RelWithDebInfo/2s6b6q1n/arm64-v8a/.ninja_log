@@ -1,0 +1,5 @@
+# ninja log v5
+1	1655	677761920	CMakeFiles/detection_based_tracker.dir/DetectionBasedTracker_jni.cpp.o	79b2592b90c36ec7
+1657	1782	677761920	D:/androidwork/OpenCV/SmartOpenCV-master/SmartOpenCV-master/app/build/intermediates/cxx/RelWithDebInfo/2s6b6q1n/obj/arm64-v8a/libdetection_based_tracker.so	f3b0bdc6fdedd3d
+0	7	0	clean	15eee308e957973f
+0	8	0	clean	15eee308e957973f

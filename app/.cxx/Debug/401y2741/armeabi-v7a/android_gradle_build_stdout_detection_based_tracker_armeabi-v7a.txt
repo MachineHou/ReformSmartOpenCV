@@ -1,0 +1,3 @@
+ninja: Entering directory `C:\Users\fosung\Desktop\ReformSmartOpenCV\app\.cxx\Debug\401y2741\armeabi-v7a'
+[1/2] Building CXX object CMakeFiles/detection_based_tracker.dir/DetectionBasedTracker_jni.cpp.o
+[2/2] Linking CXX shared library C:\Users\fosung\Desktop\ReformSmartOpenCV\app\build\intermediates\cxx\Debug\401y2741\obj\armeabi-v7a\libdetection_based_tracker.so

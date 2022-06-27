@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jooq:joor:0.9.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jooq/joor/0.9.7/dab4ea4a43112773b593c898df9fbfb19c42ac3b/joor-0.9.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jooq/joor/0.9.7/f299913ae161549ca97020b973be702c77cff289/joor-0.9.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jooq/joor/0.9.7/f25063a5c67f729f9a3de28de205cec83900e9d/joor-0.9.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
