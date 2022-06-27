@@ -38,6 +38,7 @@
     <content url="file://$MODULE_DIR$/../../../app">
       <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/.cxx/Debug/4c5x3k47" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

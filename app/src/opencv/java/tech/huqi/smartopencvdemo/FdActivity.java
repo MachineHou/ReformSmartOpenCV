@@ -196,6 +196,7 @@ public class FdActivity extends CameraActivity implements CvCameraViewListener2 
     public void onCreate(Bundle savedInstanceState) {
         Log.i(TAG, "called onCreate");
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.face_detect_surface_view);

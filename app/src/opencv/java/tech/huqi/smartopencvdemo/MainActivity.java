@@ -8,9 +8,15 @@ import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,11 +24,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import tech.huqi.smartopencvdemo.db.DatabaseHelper;
 import tech.huqi.smartopencvdemo.db.UserInfo;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, DeviceKeyMonitor.OnKeyListener {
+    private DeviceKeyMonitor deviceKeyMonitor;
+    private Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        deviceKeyMonitor = new DeviceKeyMonitor(this, this);//注册
+        bitmap = BgBlurUtils.rsBlur(this, BgBlurUtils.activityShot(this), 20);//初始图片
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_main);
         Button registerButton = (Button) findViewById(R.id.register);
         Button verifyButton = (Button) findViewById(R.id.verify);
@@ -137,5 +148,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         requestPermissionResult(requestCode, grantResults);
+    }
+
+    private ViewGroup group;
+    private ImageView bgImage;
+
+    @Override
+    public void onRecentClick() {
+        group = (ViewGroup) getWindow().getDecorView();
+        group.removeView(bgImage);
+        bgImage = new ImageView(this);
+        Rect rect = new Rect();
+        group.getWindowVisibleDisplayFrame(rect);
+        int statusBarHeight = rect.top;
+        WindowManager windowManager = getWindowManager();
+        //获取屏幕宽和高
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        windowManager.getDefaultDisplay().getMetrics(outMetrics);
+        int width = outMetrics.widthPixels;
+        int height = outMetrics.heightPixels;
+
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(width, height + statusBarHeight);
+        bgImage.setLayoutParams(params);
+        bgImage.setBackgroundColor(getResources().getColor(R.color.white));
+        if (bitmap != null) {
+            bgImage.setImageBitmap(bitmap);
+            group.addView(bgImage);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (group == null || group.getChildCount() <= 0) {
+            return;
+        }
+        for (int i = 0; i < group.getChildCount(); i++) {
+            group.removeView(bgImage);
+        }
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        deviceKeyMonitor.unregister();
     }
 }

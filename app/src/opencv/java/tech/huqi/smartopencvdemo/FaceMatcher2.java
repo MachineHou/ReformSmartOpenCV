@@ -28,7 +28,7 @@ public class FaceMatcher2 {
     public final int UNFINISHED = -2;
     public final int NO_MATCHER = -1;
     private final int MAX_COUNTER = 20;
-    private final double MY_SIMILARITY = 0.3;
+    private final double MY_SIMILARITY = 0.5;
     private List<String> mPathList;
 
     public FaceMatcher2(List<UserInfo> users) {
