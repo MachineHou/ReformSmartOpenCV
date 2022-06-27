@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">SmartOpenCV</string>
-    <string name="register">识别注册</string>
-    <string name="verify">验证匹配</string>
-    <string name="view_data">查看数据</string>
-    <string name="view_cleardata">清空数据</string>
+    <string name="register">人脸识别注册</string>
+    <string name="verify">人脸验证匹配</string>
+    <string name="view_data">人脸查看数据</string>
+    <string name="view_fingerprint">指纹业务</string>
+    <string name="view_pwdlock">手势密码</string>
 </resources>

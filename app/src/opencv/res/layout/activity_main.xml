@@ -21,11 +21,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/view_data" />
+
     <Button
-        android:id="@+id/view_cleardata"
+        android:id="@+id/view_fingerprint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="@string/view_cleardata" />
+        android:text="@string/view_fingerprint" />
+
+    <Button
+        android:id="@+id/view_pwdlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_pwdlock" />
 
 </LinearLayout>

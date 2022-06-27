@@ -1,8 +1,8 @@
 package tech.huqi.smartopencvdemo;
 
-import static tech.huqi.smartopencvdemo.PermissionHelper.RequestListener;
-import static tech.huqi.smartopencvdemo.PermissionHelper.requestPermissionResult;
-import static tech.huqi.smartopencvdemo.PermissionHelper.with;
+import static tech.huqi.smartopencvdemo.utils.PermissionHelper.RequestListener;
+import static tech.huqi.smartopencvdemo.utils.PermissionHelper.requestPermissionResult;
+import static tech.huqi.smartopencvdemo.utils.PermissionHelper.with;
 
 import android.Manifest;
 import android.content.Intent;
@@ -21,8 +21,15 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blankj.utilcode.util.AppUtils;
+
 import tech.huqi.smartopencvdemo.db.DatabaseHelper;
 import tech.huqi.smartopencvdemo.db.UserInfo;
+import tech.huqi.smartopencvdemo.gauss.BgBlurUtils;
+import tech.huqi.smartopencvdemo.gauss.DeviceKeyMonitor;
+import tech.huqi.smartopencvdemo.opencv.FdActivity;
+import tech.huqi.smartopencvdemo.opencv.ViewDataActivity;
+import tech.huqi.smartopencvdemo.utils.ToastUtil;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DeviceKeyMonitor.OnKeyListener {
     private DeviceKeyMonitor deviceKeyMonitor;
@@ -38,12 +45,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button registerButton = (Button) findViewById(R.id.register);
         Button verifyButton = (Button) findViewById(R.id.verify);
         Button viewDataButton = (Button) findViewById(R.id.view_data);
-        Button viewCleardata = (Button) findViewById(R.id.view_cleardata);
+        Button viewFingerprint = (Button) findViewById(R.id.view_fingerprint);
+        Button viewPwdlock = (Button) findViewById(R.id.view_pwdlock);
 
         registerButton.setOnClickListener(this);
         viewDataButton.setOnClickListener(this);
         verifyButton.setOnClickListener(this);
-        viewCleardata.setOnClickListener(this);
+        viewFingerprint.setOnClickListener(this);
+        viewPwdlock.setOnClickListener(this);
         initDatabase();
     }
 
@@ -100,9 +109,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.view_data:
                 startActivity(new Intent(MainActivity.this, ViewDataActivity.class));
                 break;
-            case R.id.view_cleardata:
-                DatabaseHelper helper = new DatabaseHelper(MainActivity.this);
-                helper.close();
+            case R.id.view_fingerprint:
+                startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.ZhiwenAct1"));
+                break;
+            case R.id.view_pwdlock:
+                startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.GesturePswMainActivity"));
                 break;
             default:
                 break;

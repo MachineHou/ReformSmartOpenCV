@@ -11,8 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/gesturelib" />
             <option value="$PROJECT_DIR$/openCVLibrary411" />
             <option value="$PROJECT_DIR$/smartopencv" />
+            <option value="$PROJECT_DIR$/zhiwenlib" />
           </set>
         </option>
       </GradleProjectSettings>
