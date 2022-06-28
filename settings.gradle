@@ -1,3 +1,4 @@
 include ':app', ':openCVLibrary411', ':smartopencv'
 include ':zhiwenlib'
 include ':gesturelib'
+include ':downloaderHelperlib'

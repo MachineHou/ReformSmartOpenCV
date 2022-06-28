@@ -47,12 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button viewDataButton = (Button) findViewById(R.id.view_data);
         Button viewFingerprint = (Button) findViewById(R.id.view_fingerprint);
         Button viewPwdlock = (Button) findViewById(R.id.view_pwdlock);
+        Button viewSequel = (Button) findViewById(R.id.view_sequel);
 
         registerButton.setOnClickListener(this);
         viewDataButton.setOnClickListener(this);
         verifyButton.setOnClickListener(this);
         viewFingerprint.setOnClickListener(this);
         viewPwdlock.setOnClickListener(this);
+        viewSequel.setOnClickListener(this);
         initDatabase();
     }
 
@@ -114,6 +116,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.view_pwdlock:
                 startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.GesturePswMainActivity"));
+                break;
+            case R.id.view_sequel:
+                startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.DownloaderActivity"));
                 break;
             default:
                 break;

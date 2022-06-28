@@ -5,4 +5,5 @@
     <string name="view_data">人脸查看数据</string>
     <string name="view_fingerprint">指纹业务</string>
     <string name="view_pwdlock">手势密码</string>
+    <string name="view_sequel">断点续传</string>
 </resources>

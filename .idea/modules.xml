@@ -7,6 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ReformSmartOpenCV.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.iml" filepath="$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/downloaderHelperlib/ReformSmartOpenCV.downloaderHelperlib.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.iml" filepath="$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.main.iml" />
