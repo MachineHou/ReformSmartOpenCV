@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.blankj.utilcode.util.AppUtils;
+import com.blankj.utilcode.util.ToastUtils;
 
 import tech.huqi.smartopencvdemo.db.DatabaseHelper;
 import tech.huqi.smartopencvdemo.db.UserInfo;
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button viewFingerprint = (Button) findViewById(R.id.view_fingerprint);
         Button viewPwdlock = (Button) findViewById(R.id.view_pwdlock);
         Button viewSequel = (Button) findViewById(R.id.view_sequel);
+        Button viewNfc = (Button) findViewById(R.id.view_nfc);
+        Button viewOcr = (Button) findViewById(R.id.view_ocr);
 
         registerButton.setOnClickListener(this);
         viewDataButton.setOnClickListener(this);
@@ -55,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewFingerprint.setOnClickListener(this);
         viewPwdlock.setOnClickListener(this);
         viewSequel.setOnClickListener(this);
+        viewNfc.setOnClickListener(this);
+        viewNfc.setOnClickListener(this);
+        viewOcr.setOnClickListener(this);
         initDatabase();
     }
 
@@ -119,6 +125,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.view_sequel:
                 startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.DownloaderActivity"));
+                break;
+            case R.id.view_nfc:
+                ToastUtils.showShort("开发中....");
+//                startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.NfcActivity"));
+                break;
+            case R.id.view_ocr:
+                startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.ScannerAct2"));
                 break;
             default:
                 break;

@@ -64,6 +64,7 @@ dependencies {
     implementation project(':zhiwenlib')//指纹库
     implementation project(':gesturelib')//密码库
     implementation project(':downloaderHelperlib')//断点续传库
+    implementation project(':libocr')//断点续传库`
 
     implementation 'com.google.mlkit:object-detection-common:17.1.0'
 }

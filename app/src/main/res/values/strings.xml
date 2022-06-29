@@ -6,4 +6,6 @@
     <string name="view_fingerprint">指纹业务</string>
     <string name="view_pwdlock">手势密码</string>
     <string name="view_sequel">断点续传</string>
+    <string name="view_nfc">NFC识别</string>
+    <string name="view_ocr">OCR识别</string>
 </resources>

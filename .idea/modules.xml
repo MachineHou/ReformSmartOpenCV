@@ -15,6 +15,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/gesturelib/ReformSmartOpenCV.gesturelib.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.iml" filepath="$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.main.iml" filepath="$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/libocr/ReformSmartOpenCV.libocr.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.main.iml" filepath="$PROJECT_DIR$/.idea/modules/openCVLibrary411/ReformSmartOpenCV.openCVLibrary411.main.iml" />

@@ -27,6 +27,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/opencvDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/opencvDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/opencvDebug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/opencvDebug/out" isTestSource="false" generated="true" />
     </content>
     <content url="file://$MODULE_DIR$/../../../app/build/generated/renderscript_source_output_dir/opencvDebug/out" />
     <content url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/opencv/debug">
@@ -34,6 +35,7 @@
     </content>
     <content url="file://$MODULE_DIR$/../../../app/build/generated/res/rs/opencv/debug" />
     <content url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/opencv/debug">
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/opencv/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/opencv/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/opencv/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/opencv/debug" isTestSource="false" generated="true" />
@@ -57,6 +59,7 @@
     <orderEntry type="module" module-name="ReformSmartOpenCV.zhiwenlib.main" />
     <orderEntry type="module" module-name="ReformSmartOpenCV.gesturelib.main" />
     <orderEntry type="module" module-name="ReformSmartOpenCV.downloaderHelperlib.main" />
+    <orderEntry type="module" module-name="ReformSmartOpenCV.libocr.main" />
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.3.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.4.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
