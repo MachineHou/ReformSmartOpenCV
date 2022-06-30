@@ -48,5 +48,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/view_ocr" />
+    <Button
+        android:id="@+id/app_remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_remove" />
 
 </LinearLayout>

@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -20,9 +21,12 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.pm.ShortcutManagerCompat;
 
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ToastUtils;
+
+import java.util.Collections;
 
 import tech.huqi.smartopencvdemo.db.DatabaseHelper;
 import tech.huqi.smartopencvdemo.db.UserInfo;
@@ -51,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button viewSequel = (Button) findViewById(R.id.view_sequel);
         Button viewNfc = (Button) findViewById(R.id.view_nfc);
         Button viewOcr = (Button) findViewById(R.id.view_ocr);
+        Button appRemove = (Button) findViewById(R.id.app_remove);
 
         registerButton.setOnClickListener(this);
         viewDataButton.setOnClickListener(this);
@@ -61,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewNfc.setOnClickListener(this);
         viewNfc.setOnClickListener(this);
         viewOcr.setOnClickListener(this);
+        appRemove.setOnClickListener(this);
         initDatabase();
     }
 
@@ -132,6 +138,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.view_ocr:
                 startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.ScannerAct2"));
+                break;
+            case R.id.app_remove:
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
+                    ShortcutManagerCompat.removeDynamicShortcuts(this,Collections.singletonList("test_0"));//唯一标识id);
+                }
                 break;
             default:
                 break;
