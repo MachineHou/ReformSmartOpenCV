@@ -9,7 +9,9 @@
         <entry key="..\:/Users/fosung/Desktop/SmartOpenCV-master/SmartOpenCV-master/app/src/opencv/res/layout/face_detect_surface_view.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/fosung/Desktop/SmartOpenCV-master/SmartOpenCV-master/app/src/opencv/res/layout/item_user.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/fosung/Desktop/SmartOpenCV-master/SmartOpenCV-master/app/src/smartopencv/res/layout/face_detect_surface_view.xml" value="0.23958333333333334" />
-        <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/app/src/opencv/res/layout/activity_main.xml" value="0.23958333333333334" />
+        <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/app/src/opencv/res/layout/activity_main.xml" value="0.22007722007722008" />
+        <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/app/src/opencv/res/layout/activity_server.xml" value="0.23177083333333334" />
+        <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/app/src/opencv/res/layout/activity_service.xml" value="0.23177083333333334" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/app/src/opencv/res/layout/activity_zhiwen1.xml" value="0.23958333333333334" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/downloaderHelperlib/src/main/res/drawable/selector_btn.xml" value="0.1825" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/downloaderHelperlib/src/main/res/drawable/shape_btn_blue.xml" value="0.1825" />
@@ -24,6 +26,7 @@
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/nfcreaderlib/src/main/res/drawable/btnreg.xml" value="0.1825" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/nfcreaderlib/src/main/res/layout/activity_set.xml" value="0.23958333333333334" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/nfcreaderlib/src/main/res/layout/main.xml" value="0.23958333333333334" />
+        <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/slbota/src/main/res/layout/activity_main_ota.xml" value="0.23177083333333334" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/zhiwenlib/src/main/res/drawable/bg_finger_change_dialog.xml" value="0.1825" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/zhiwenlib/src/main/res/layout/activity_zhiwen1.xml" value="0.23958333333333334" />
         <entry key="..\:/androidwork/OpenCV/ReformSmartOpenCV/zhiwenlib/src/main/res/layout/finger_dialog_custom_view_layout.xml" value="0.23958333333333334" />

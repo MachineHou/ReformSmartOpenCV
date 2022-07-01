@@ -54,4 +54,15 @@
         android:layout_height="wrap_content"
         android:text="@string/app_remove" />
 
+    <Button
+        android:id="@+id/view_ota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_ota" />
+    <Button
+        android:id="@+id/view_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_service" />
+
 </LinearLayout>

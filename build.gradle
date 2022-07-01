@@ -2,15 +2,23 @@
 
 buildscript {
     repositories {
+        gradlePluginPortal()
         google()
-        mavenLocal()
+//        mavenLocal()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
         maven {
-            url "https://www.jitpack.io"
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
         }
+        maven { url 'https://maven.aliyun.com/repository/public' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -18,12 +26,18 @@ buildscript {
 
 allprojects {
     repositories {
+        gradlePluginPortal()
         google()
-        mavenLocal()
+//        mavenLocal()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
         maven {
-            url "https://www.jitpack.io"
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
         }
+        maven { url 'https://maven.aliyun.com/repository/public' }
     }
 }
 

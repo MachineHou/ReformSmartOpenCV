@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button viewNfc = (Button) findViewById(R.id.view_nfc);
         Button viewOcr = (Button) findViewById(R.id.view_ocr);
         Button appRemove = (Button) findViewById(R.id.app_remove);
+        Button viewOta = (Button) findViewById(R.id.view_ota);
+        Button viewService = (Button) findViewById(R.id.view_service);
 
         registerButton.setOnClickListener(this);
         viewDataButton.setOnClickListener(this);
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewNfc.setOnClickListener(this);
         viewOcr.setOnClickListener(this);
         appRemove.setOnClickListener(this);
+        viewOta.setOnClickListener(this);
+        viewService.setOnClickListener(this);
         initDatabase();
     }
 
@@ -141,8 +145,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.app_remove:
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-                    ShortcutManagerCompat.removeDynamicShortcuts(this,Collections.singletonList("test_0"));//唯一标识id);
+                    ShortcutManagerCompat.removeDynamicShortcuts(this, Collections.singletonList("test_0"));//唯一标识id);
                 }
+                break;
+            case R.id.view_ota:
+                startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.OTAAct"));
+                break;
+            case R.id.view_service:
+                startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.ServiceActivity"));
                 break;
             default:
                 break;
