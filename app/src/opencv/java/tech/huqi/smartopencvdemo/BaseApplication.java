@@ -23,7 +23,7 @@ public class BaseApplication extends Application {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
             ShortcutInfoCompat info = new ShortcutInfoCompat.Builder(this, "test_0")
                     .setShortLabel(getString(R.string.app_test_0))
-                    .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_launcher))
+                    .setIcon(IconCompat.createWithResource(this, R.drawable.icon2_conew1))
                     //跳转的目标，定义Activity
                     .setIntent(new Intent(Intent.ACTION_MAIN, null, this, FdActivity.class))
                     .build();
@@ -32,7 +32,7 @@ public class BaseApplication extends Application {
 
             ShortcutInfoCompat info1 = new ShortcutInfoCompat.Builder(this, "test_1")
                     .setShortLabel(getString(R.string.app_test_1))
-                    .setIcon(IconCompat.createWithResource(this, R.mipmap.ic_launcher))
+                    .setIcon(IconCompat.createWithResource(this,R.drawable.icon2_conew1))
                     //跳转的目标，定义Activity
                     .setIntent(new Intent(Intent.ACTION_MAIN, null, this, MainActivity.class))
                     .build();
@@ -40,10 +40,10 @@ public class BaseApplication extends Application {
             ShortcutManagerCompat.addDynamicShortcuts(this, Collections.singletonList(info1));
         }
         /**保活任务*/
-        showService();
+//        showService();
     }
 
-    private void showService() {
+    public void showService() {
         //需要在 Application 的 onCreate() 中调用一次 DaemonEnv.initialize()
         DaemonEnv.initialize(this, TraceServiceImpl.class, DaemonEnv.DEFAULT_WAKE_UP_INTERVAL);
         TraceServiceImpl.sShouldStopService = false;

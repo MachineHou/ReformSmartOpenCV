@@ -1,14 +1,20 @@
 package tech.huqi.smartopencvdemo.service;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blankj.utilcode.util.AppUtils;
+import com.blankj.utilcode.util.ServiceUtils;
+import com.blankj.utilcode.util.Utils;
 import com.xdandroid.hellodaemon.DaemonEnv;
 import com.xdandroid.hellodaemon.IntentWrapper;
 
+import tech.huqi.smartopencvdemo.BaseApplication;
 import tech.huqi.smartopencvdemo.R;
 
 public class ServiceActivity extends AppCompatActivity {
@@ -18,12 +24,19 @@ public class ServiceActivity extends AppCompatActivity {
         super.onCreate(b);
         setContentView(R.layout.activity_service);
     }
+    public void showService() {
+        //需要在 Application 的 onCreate() 中调用一次 DaemonEnv.initialize()
+        DaemonEnv.initialize(ServiceActivity.this, TraceServiceImpl.class, DaemonEnv.DEFAULT_WAKE_UP_INTERVAL);
+        TraceServiceImpl.sShouldStopService = false;
+        DaemonEnv.startServiceMayBind(TraceServiceImpl.class);
+    }
 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_start:
-                TraceServiceImpl.sShouldStopService = false;
-                DaemonEnv.startServiceMayBind(TraceServiceImpl.class);
+                showService();
+//                TraceServiceImpl.sShouldStopService = false;
+//                DaemonEnv.startServiceMayBind(TraceServiceImpl.class);
                 break;
             case R.id.btn_white:
                 IntentWrapper.whiteListMatters(this, "轨迹跟踪服务的持续运行");
@@ -31,6 +44,19 @@ public class ServiceActivity extends AppCompatActivity {
             case R.id.btn_stop:
                 TraceServiceImpl.stopService();
                 break;
+            case R.id.btn_service:
+                initForgetOrBack();
+                break;
+        }
+    }
+
+    private void initForgetOrBack() {
+        if (!ServiceUtils.isServiceRunning(MyService.class)) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(new Intent(ServiceActivity.this, MyService.class));
+            } else {
+                startService(new Intent(ServiceActivity.this, MyService.class));
+            }
         }
     }
 

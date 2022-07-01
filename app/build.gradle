@@ -4,7 +4,7 @@ android {
     compileSdkVersion 31
     defaultConfig {
         applicationId "tech.huqi.smartopencvdemo"
-        minSdkVersion 25
+        minSdkVersion 26
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"

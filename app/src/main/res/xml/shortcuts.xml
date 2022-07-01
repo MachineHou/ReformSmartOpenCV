@@ -3,7 +3,7 @@
 
     <shortcut
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon2_conew1"
         android:shortcutId="test_0"
         android:shortcutShortLabel="@string/app_test_0">
         <intent
@@ -16,7 +16,7 @@
 
     <shortcut
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon2_conew1"
         android:shortcutId="test_1"
         android:shortcutShortLabel="@string/app_test_1">
         <intent

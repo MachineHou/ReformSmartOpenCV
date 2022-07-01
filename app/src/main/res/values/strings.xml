@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmartOpenCV</string>
+    <string name="app_name">android进阶库</string>
     <string name="register">人脸识别注册</string>
     <string name="verify">人脸验证匹配</string>
     <string name="view_data">人脸查看数据</string>
