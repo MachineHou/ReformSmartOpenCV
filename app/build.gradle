@@ -68,5 +68,6 @@ dependencies {
     implementation project(':slbota')//ota升级
     implementation project(':hellodaemon')//任务保活
 
+    implementation 'com.github.getActivity:XXPermissions:11.0'
     implementation 'com.google.mlkit:object-detection-common:17.1.0'
 }

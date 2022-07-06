@@ -6,6 +6,7 @@ import static tech.huqi.smartopencvdemo.utils.PermissionHelper.with;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
@@ -21,6 +22,8 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.pm.ShortcutManagerCompat;
 
 import com.blankj.utilcode.util.AppUtils;
@@ -34,11 +37,14 @@ import tech.huqi.smartopencvdemo.gauss.BgBlurUtils;
 import tech.huqi.smartopencvdemo.gauss.DeviceKeyMonitor;
 import tech.huqi.smartopencvdemo.opencv.FdActivity;
 import tech.huqi.smartopencvdemo.opencv.ViewDataActivity;
+import tech.huqi.smartopencvdemo.utils.RuntimeSettingPage;
+import tech.huqi.smartopencvdemo.utils.ShortcutManage;
 import tech.huqi.smartopencvdemo.utils.ToastUtil;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DeviceKeyMonitor.OnKeyListener {
     private DeviceKeyMonitor deviceKeyMonitor;
     private Bitmap bitmap;
+    private Button appWindowShortcuts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button appRemove = (Button) findViewById(R.id.app_remove);
         Button viewOta = (Button) findViewById(R.id.view_ota);
         Button viewService = (Button) findViewById(R.id.view_service);
+        appWindowShortcuts = (Button) findViewById(R.id.app_window_shortcuts);
 
         registerButton.setOnClickListener(this);
         viewDataButton.setOnClickListener(this);
@@ -71,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         appRemove.setOnClickListener(this);
         viewOta.setOnClickListener(this);
         viewService.setOnClickListener(this);
+        appWindowShortcuts.setOnClickListener(this);
         initDatabase();
     }
 
@@ -154,10 +162,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.view_service:
                 startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.ServiceActivity"));
                 break;
+            case R.id.app_window_shortcuts:
+                if (!getPermission().equals("已同意")) {
+                    RuntimeSettingPage runtimeSettingPage = new RuntimeSettingPage(MainActivity.this);
+                    runtimeSettingPage.start();
+                    return;
+                }
+                if (ShortcutManage.shortcutHigh(MainActivity.this, "OCR识别") || ShortcutManage.hasShortcutLow(MainActivity.this, "OCR识别")) {
+                    ToastUtils.showShort("已经有桌面快捷方式了");
+                    return;
+                }
+                String[] permissions = {Manifest.permission.INSTALL_SHORTCUT, Manifest.permission.READ_SYNC_SETTINGS};
+                if (ContextCompat.checkSelfPermission(MainActivity.this, permissions[0]) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainActivity.this, permissions, PERMISSION_REQUEST);
+                }
+                ShortcutManage.addShortcut(getApplicationContext(), R.drawable.user_defaut, AppUtils.getAppPackageName() + ".hs.act.slbapp.ScannerAct2", "OCR识别");
+
+
+                break;
             default:
                 break;
         }
     }
+
+
+    private static final int PERMISSION_REQUEST = 1;
+
+
+    private String getPermission() {
+        int check = ShortcutManage.check(this);
+        String state = "未知";
+        switch (check) {
+            case ShortcutManage.PERMISSION_DENIED:
+                state = "已禁止";
+                break;
+            case ShortcutManage.PERMISSION_GRANTED:
+                state = "已同意";
+                break;
+            case ShortcutManage.PERMISSION_ASK:
+                state = "询问";
+                break;
+            case ShortcutManage.PERMISSION_UNKNOWN:
+                state = "未知";
+                break;
+        }
+        return state;
+    }
+
 
     private void requestCameraPermission(RequestListener listener) {
         with(MainActivity.this)
@@ -197,6 +248,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             int requestCode, @NonNull String[] permissions,
             @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 0) {
+            try {
+                appWindowShortcuts.setText(getString(R.string.app_window_shortcuts) + getPermission());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         requestPermissionResult(requestCode, grantResults);
     }
 
@@ -230,6 +288,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
+        appWindowShortcuts.setText(getString(R.string.app_window_shortcuts) + getPermission());
         if (group == null || group.getChildCount() <= 0) {
             return;
         }

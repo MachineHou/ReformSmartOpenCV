@@ -49,6 +49,12 @@
         android:layout_height="wrap_content"
         android:text="@string/view_ocr" />
     <Button
+        android:id="@+id/app_window_shortcuts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_window_shortcuts" />
+
+    <Button
         android:id="@+id/app_remove"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

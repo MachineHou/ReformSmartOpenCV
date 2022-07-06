@@ -100,6 +100,7 @@
     <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview:1.2.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.blankj:utilcodex:1.30.6@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.getActivity:XXPermissions:11.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.mlkit:object-detection-common:17.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement:17.6.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tasks:17.2.1@aar" level="project" />

@@ -9,6 +9,7 @@
     <string name="view_nfc">NFC识别</string>
     <string name="view_ocr">OCR识别</string>
     <string name="app_remove">移除应用快捷方式</string>
+    <string name="app_window_shortcuts">添加快捷应用到桌面</string>
     <string name="app_test_0">人脸识别</string>
     <string name="app_test_1">打开首页</string>
     <string name="view_ota">OTA升级</string>
