@@ -59,9 +59,9 @@ public class RuntimeSettingPage {
     }
 
     private static Intent huaweiApi(Context context) {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            return defaultApi(context);
-//        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return defaultApi(context);
+        }
         Intent intent = new Intent();
         intent.setComponent(new ComponentName("com.huawei.systemmanager", "com.huawei.permissionmanager.ui.MainActivity"));
         return intent;

@@ -28,8 +28,12 @@ import androidx.core.content.pm.ShortcutManagerCompat;
 
 import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ToastUtils;
+import com.hjq.permissions.OnPermissionCallback;
+import com.hjq.permissions.Permission;
+import com.hjq.permissions.XXPermissions;
 
 import java.util.Collections;
+import java.util.List;
 
 import tech.huqi.smartopencvdemo.db.DatabaseHelper;
 import tech.huqi.smartopencvdemo.db.UserInfo;
@@ -163,28 +167,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(AppUtils.getAppPackageName() + ".hs.act.slbapp.ServiceActivity"));
                 break;
             case R.id.app_window_shortcuts:
-                if (!getPermission().equals("已同意")) {
+                if ("已同意".equals(getPermission())|| "未知".equals(getPermission())) {
+                    if (ShortcutManage.shortcutHigh(MainActivity.this, "OCR识别") || ShortcutManage.hasShortcutLow(MainActivity.this, "OCR识别")) {
+                        ToastUtils.showShort("已经有桌面快捷方式了");
+                        return;
+                    }
+                    String[] permissions = {Manifest.permission.INSTALL_SHORTCUT, Manifest.permission.READ_SYNC_SETTINGS};
+                    if (ContextCompat.checkSelfPermission(MainActivity.this, permissions[0]) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(MainActivity.this, permissions, PERMISSION_REQUEST);
+                    }
+                    ShortcutManage.addShortcut(getApplicationContext(), R.drawable.user_defaut, AppUtils.getAppPackageName() + ".hs.act.slbapp.ScannerAct2", "OCR识别");
+                }else{
                     RuntimeSettingPage runtimeSettingPage = new RuntimeSettingPage(MainActivity.this);
                     runtimeSettingPage.start();
                     return;
                 }
-                if (ShortcutManage.shortcutHigh(MainActivity.this, "OCR识别") || ShortcutManage.hasShortcutLow(MainActivity.this, "OCR识别")) {
-                    ToastUtils.showShort("已经有桌面快捷方式了");
-                    return;
-                }
-                String[] permissions = {Manifest.permission.INSTALL_SHORTCUT, Manifest.permission.READ_SYNC_SETTINGS};
-                if (ContextCompat.checkSelfPermission(MainActivity.this, permissions[0]) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(MainActivity.this, permissions, PERMISSION_REQUEST);
-                }
-                ShortcutManage.addShortcut(getApplicationContext(), R.drawable.user_defaut, AppUtils.getAppPackageName() + ".hs.act.slbapp.ScannerAct2", "OCR识别");
-
 
                 break;
             default:
                 break;
         }
     }
-
 
     private static final int PERMISSION_REQUEST = 1;
 
